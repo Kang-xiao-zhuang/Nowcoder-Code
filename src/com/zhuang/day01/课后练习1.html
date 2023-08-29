@@ -1,0 +1,59 @@
+<div class="subject-question" deep="7">
+<blockquote>  <div>   「只要我拉动绳线，你就得随之起舞。」&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ——泰兹瑞  </div> </blockquote> <div>  <img alt="" src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540897331977_Image.ashx"><br data-filtered="filtered"> </div> <div>  <br data-filtered="filtered"> </div> <div>  &nbsp; &nbsp; &nbsp; &nbsp;泰兹瑞来到卡拉德许之后，由于他精湛的神器制造技术，可谓是过的如鱼得水。这次，他为自己打造了一个编辑器，称为威穆（Veim）。操作威穆时，有两种模式，具体操作如下。 </div> <div>  <br data-filtered="filtered"> </div> <div>  <strong>在 <em>Normal Mode</em> 下</strong><strong>   <div>   <div>   </div>  </div> </strong>  </div> <div>  - 按下 <strong>i</strong> ：进入 <em>Insert Mode</em> 。<br data-filtered="filtered"> - 按下 <strong>f</strong> ：紧接着一个小写字母 char，若当前光标<strong>后（右）方</strong>有至少一个 char ，将光标移动到其所在位置，否则不移动。<br data-filtered="filtered"> - 按下 <strong>x</strong> ：删除当前光标所在位的字符，后面的字符均会前移一格。<br data-filtered="filtered"> - 按下 <strong>h</strong> ：将光标向左（前）移动一格，若无法移动就不移动。<br data-filtered="filtered"> - 按下 <strong>l</strong> ：将光标向右（后）移动一格，若无法移动就不移动。<br data-filtered="filtered"> - 若按下了其他字符：无任何效果。 </div> <div>  <br data-filtered="filtered"> </div> <div>  <strong>在 <em>Insert Mode</em> 下</strong>  </div> <div>  <span>- 按下非 e 小写字母 char ：在光标<strong>当前位置前</strong>插入这个字母 char。<br data-filtered="filtered"> - 按下 <strong>e</strong> ：退出 <em>Insert Mode</em>（进入 <em>Normal Mode</em>）。&nbsp;<br data-filtered="filtered"> <br data-filtered="filtered"> </span>  </div> <div>  <span>&nbsp; &nbsp; &nbsp; &nbsp;</span>（具体请见样例） </div> <div>  <span>&nbsp; &nbsp; &nbsp; &nbsp;</span>现在泰兹瑞的威穆中已经写入了一个字符串&nbsp;<span><span><span>s</span></span></span>&nbsp;。接下去泰兹瑞进行了一波操作（按下了若干按键），他的按键序列为 t&nbsp;。现给出&nbsp;<span><span>s</span></span>&nbsp;和&nbsp;<span><span>t</span></span>&nbsp;，求这波操作之后威穆内留下的字符串。 </div>
+<br data-filtered="filtered">
+<h5><b>输入描述:</b></h5>
+<pre>两行，第一行字符串 s ，第二行字符串 t 。</pre>
+<br data-filtered="filtered">
+<br data-filtered="filtered">
+<h5><b>输出描述:</b></h5>
+<pre>一行，威穆里最后留下的字符串。</pre>
+<div class="question-oi">
+<div class="question-oi-hd">
+示例1
+</div>
+<div class="question-oi-bd">
+<div class="question-oi-mod">
+<h2>输入</h2>
+<div class="question-oi-cont">
+<pre>applese
+xfllhlia</pre>
+</div>
+</div>
+<div class="question-oi-mod">
+<h2>输出</h2>
+<div class="question-oi-cont">
+<pre>pplaese</pre>
+</div>
+</div>
+<div class="question-oi-mod">
+<h2>说明</h2>
+<div class="question-oi-cont">
+<pre>- 初始时，字符串为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606662_equation?tex=%5Cmathtt%7B%5Cunderline%7Ba%7Dpplese%7D" alt="\mathtt{\underline{a}pplese}">，威穆处于 Normal Mode 。下划线表示光标所在位置。<br data-filtered="filtered">- 第一步操作为 x ，删除当前光标所在位的字符，并且光标后移一格。字符串变为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606648_equation?tex=%5Cmathtt%7B%5Cunderline%7Bp%7Dplese%7D" alt="\mathtt{\underline{p}plese}"> 。威穆仍处于 Normal Mode。<br data-filtered="filtered">- 下一步操作为 f ，之后跟有一个字符 `l` 。光标后存在字符 `l` ，故移动到该位置。字符串变为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606700_equation?tex=%5Cmathtt%7Bpp%5Cunderline%7Bl%7Dese%7D" alt="\mathtt{pp\underline{l}ese}"> 。威穆仍处于 Normal Mode。<br data-filtered="filtered">- 下一步操作为 l ，光标后移一格。字符串变为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606714_equation?tex=%5Cmathtt%7Bppl%5Cunderline%7Be%7Dse%7D" alt="\mathtt{ppl\underline{e}se}"> 。威穆仍处于 Normal Mode。<br data-filtered="filtered">- 下一步操作为 h ，光标前移一格。字符串变为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606700_equation?tex=%5Cmathtt%7Bpp%5Cunderline%7Bl%7Dese%7D" alt="\mathtt{pp\underline{l}ese}"> 。威穆仍处于 Normal Mode。<br data-filtered="filtered">- 下一步操作为 l ，光标后移一格。字符串变为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606714_equation?tex=%5Cmathtt%7Bppl%5Cunderline%7Be%7Dse%7D" alt="\mathtt{ppl\underline{e}se}"> 。威穆仍处于 Normal Mode。<br data-filtered="filtered">- 下一步操作为 i ，威穆进入 Insert Mode。字符串仍为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606714_equation?tex=%5Cmathtt%7Bppl%5Cunderline%7Be%7Dse%7D" alt="\mathtt{ppl\underline{e}se}"> 。<br data-filtered="filtered">- 下一步操作为 a ，而非 e ，故插入字符 a 。字符串变为 <img src="https://uploadfiles.nowcoder.com/files/20181030/309907_1540895606723_equation?tex=%5Cmathtt%7Bppla%5Cunderline%7Be%7Dse%7D" alt="\mathtt{ppla\underline{e}se}"> 。</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="question-oi">
+<div class="question-oi-hd">
+示例2
+</div>
+<div class="question-oi-bd">
+<div class="question-oi-mod">
+<h2>输入</h2>
+<div class="question-oi-cont">
+<pre>pppp
+iaefpfpia</pre>
+</div>
+</div>
+<div class="question-oi-mod">
+<h2>输出</h2>
+<div class="question-oi-cont">
+<pre>appapp</pre>
+</div>
+</div>
+</div>
+</div>
+<br data-filtered="filtered">
+<h5><b>备注:</b></h5>
+<pre>1 ≤ |s|, |t| ≤ 10<sup>5</sup><br data-filtered="filtered">s, t 均由小写拉丁字母组成。</pre>
+</div>
